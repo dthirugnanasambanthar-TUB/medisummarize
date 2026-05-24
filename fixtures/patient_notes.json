@@ -1,0 +1,876 @@
+[
+  {
+    "note_id": "note_001",
+    "raw_text": "The patient is a 25-year-old female who presented to the emergency department with a 2-day history of abdominal pain, initially diffuse but now localized to the right lower quadrant. She reports that the pain is constant, worsened by movement, and accompanied by nausea and vomiting. The patient's temperature is 38.5 degrees Celsius, and she appears uncomfortable. On physical examination, the patient has tenderness to palpation in the right lower quadrant, with guarding and rebound tenderness. Laboratory results show a white blood cell count of 15,000 cells per microliter, and imaging studies reveal an inflamed appendix. The patient's past medical history is significant for asthma, and she takes an albuterol inhaler as needed.",
+    "ground_truth": {
+      "subjective": "The patient reports a 2-day history of abdominal pain, nausea, and vomiting.",
+      "objective": "The patient has tenderness to palpation in the right lower quadrant, with guarding and rebound tenderness, a temperature of 38.5 degrees Celsius, and a white blood cell count of 15,000 cells per microliter.",
+      "assessment": "The patient likely has acute appendicitis.",
+      "plan": "The patient will undergo an appendectomy, and post-operative care will include pain management and monitoring for complications."
+    },
+    "metadata": {
+      "age": 25,
+      "gender": "F",
+      "chief_complaint": "appendicitis",
+      "has_allergies": true,
+      "allergies": [
+        "penicillin"
+      ]
+    }
+  },
+  {
+    "note_id": "note_002",
+    "raw_text": "The patient is a 47-year-old male who presents for a follow-up appointment regarding his type 2 diabetes. He reports that he has been experiencing increased thirst and urination over the past few weeks, despite adhering to his medication regimen. His blood glucose levels have been ranging from 150-200 mg/dL, which is slightly higher than his target range. He denies any other symptoms, such as blurred vision or numbness in his extremities. His physical exam reveals a blood pressure of 130/80 mmHg, a pulse of 80 beats per minute, and a body mass index of 32. His labs from last week show a hemoglobin A1c of 7.5%. The patient is concerned about the potential need to adjust his medication or insulin regimen.",
+    "ground_truth": {
+      "subjective": "The patient reports increased thirst and urination, despite adhering to his medication regimen.",
+      "objective": "Blood glucose levels ranging from 150-200 mg/dL, blood pressure of 130/80 mmHg, pulse of 80 beats per minute, body mass index of 32, and hemoglobin A1c of 7.5%.",
+      "assessment": "The patient's type 2 diabetes is not adequately controlled, and adjustments to his medication or insulin regimen may be necessary.",
+      "plan": "Adjust the patient's metformin dose to 1000 mg twice daily, and consider adding a sulfonylurea or pioglitazone if his glucose levels do not improve. Schedule a follow-up appointment in 3 months to reassess his glucose control."
+    },
+    "metadata": {
+      "age": 47,
+      "gender": "M",
+      "chief_complaint": "type 2 diabetes follow-up",
+      "has_allergies": true,
+      "allergies": [
+        "sulfonamides"
+      ]
+    }
+  },
+  {
+    "note_id": "note_003",
+    "raw_text": "The patient, a 67-year-old female, presents to the emergency department with a chief complaint of severe hip pain after a fall at home. She reports that she was walking to the kitchen when she slipped on a rug and fell onto her right side. The patient states that she has been experiencing significant pain and difficulty moving her right leg since the incident. Upon examination, the patient is found to have limited range of motion in her right hip and significant tenderness to palpation. Her vital signs are stable, with a blood pressure of 120/80 mmHg, a heart rate of 80 bpm, and an oxygen saturation of 98% on room air. The patient's past medical history is notable for hypertension and hyperlipidemia, for which she takes lisinopril and atorvastatin. She has no known allergies.",
+    "ground_truth": {
+      "subjective": "The patient reports severe hip pain after a fall at home and has been experiencing significant pain and difficulty moving her right leg since the incident.",
+      "objective": "Limited range of motion in her right hip, significant tenderness to palpation, blood pressure of 120/80 mmHg, heart rate of 80 bpm, and oxygen saturation of 98% on room air.",
+      "assessment": "The patient is diagnosed with a hip fracture, likely due to the fall at home.",
+      "plan": "The patient will be admitted to the hospital for further evaluation and treatment, including surgical consultation for potential operative management of the hip fracture. She will also be started on pain management and will undergo physical therapy to improve mobility and strength."
+    },
+    "metadata": {
+      "age": 67,
+      "gender": "F",
+      "chief_complaint": "hip fracture",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_004",
+    "raw_text": "The patient, a 29-year-old male, presented to the emergency department with a chief complaint of worsening shortness of breath and wheezing over the past 24 hours, consistent with an asthma attack. He reports using his albuterol inhaler multiple times a day without significant relief. The patient's symptoms started after a recent upper respiratory infection and have been exacerbated by exposure to pollen. He has a history of asthma since childhood and has been managed with a combination of inhaled corticosteroids and bronchodilators. On physical examination, the patient was found to be in moderate distress, with a respiratory rate of 24 breaths per minute, oxygen saturation of 92% on room air, and bilateral wheezing on lung auscultation. The patient's peak flow meter reading was 150 L/min, which is significantly lower than his personal best of 350 L/min. He is allergic to penicillin and has a family history of asthma and eczema.",
+    "ground_truth": {
+      "subjective": "The patient reports worsening shortness of breath and wheezing over the past 24 hours, consistent with an asthma attack, and has been using his albuterol inhaler multiple times a day without significant relief.",
+      "objective": "Respiratory rate of 24 breaths per minute, oxygen saturation of 92% on room air, bilateral wheezing on lung auscultation, and peak flow meter reading of 150 L/min.",
+      "assessment": "Asthma exacerbation, likely triggered by a recent upper respiratory infection and exposure to pollen.",
+      "plan": "The patient will be treated with a course of oral corticosteroids, inhaled bronchodilators, and oxygen therapy as needed. He will also be educated on proper inhaler technique and the importance of adherence to his medication regimen. Follow-up with his primary care physician and a pulmonologist will be arranged to further manage his asthma."
+    },
+    "metadata": {
+      "age": 29,
+      "gender": "M",
+      "chief_complaint": "asthma attack",
+      "has_allergies": true,
+      "allergies": [
+        "penicillin"
+      ]
+    }
+  },
+  {
+    "note_id": "note_005",
+    "raw_text": "The patient is a 57-year-old female who presents to the emergency department with a chief complaint of severe headache and blurry vision. She reports that her blood pressure has been elevated over the past few days, but she has not been taking her medication as directed. Upon examination, the patient's blood pressure is 220/140 mmHg, and she has a heart rate of 110 bpm. Her laboratory results show elevated serum creatinine and urine protein. The patient's past medical history is significant for hypertension, diabetes, and chronic kidney disease. She is currently taking lisinopril, metformin, and atorvastatin, but she admits to not taking them as prescribed due to cost concerns.",
+    "ground_truth": {
+      "subjective": "The patient reports severe headache and blurry vision, and admits to not taking her medications as directed.",
+      "objective": "Blood pressure 220/140 mmHg, heart rate 110 bpm, elevated serum creatinine, and urine protein.",
+      "assessment": "Hypertensive crisis with potential end-organ damage, non-adherence to medication regimen.",
+      "plan": "Administer intravenous antihypertensive medication, obtain urgent nephrology consultation, and provide patient education on medication adherence and cost assistance programs."
+    },
+    "metadata": {
+      "age": 57,
+      "gender": "F",
+      "chief_complaint": "hypertensive crisis",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_006",
+    "raw_text": "The patient, a 77-year-old male, presented to the emergency department with symptoms of a stroke, including sudden onset of right-sided weakness and slurred speech. He reported that the symptoms started approximately 2 hours prior to arrival and have been constant since then. The patient has a past medical history of hypertension, hyperlipidemia, and diabetes mellitus. He is currently taking aspirin, atorvastatin, and metformin. On physical examination, the patient was found to have a blood pressure of 180/100 mmHg, a heart rate of 100 beats per minute, and a respiratory rate of 20 breaths per minute. The patient's neurological examination revealed right-sided hemiparesis, with 2/5 strength in the right upper and lower extremities. A non-contrast computed tomography (CT) scan of the head was ordered to evaluate for acute ischemic stroke.",
+    "ground_truth": {
+      "subjective": "The patient reports sudden onset of right-sided weakness and slurred speech.",
+      "objective": "Right-sided hemiparesis, blood pressure of 180/100 mmHg, heart rate of 100 beats per minute, respiratory rate of 20 breaths per minute.",
+      "assessment": "Acute ischemic stroke, likely due to atherosclerotic disease given the patient's history of hypertension, hyperlipidemia, and diabetes mellitus.",
+      "plan": "The patient will be admitted to the stroke unit for further evaluation and management. He will be started on intravenous tissue plasminogen activator (tPA) and will undergo a magnetic resonance imaging (MRI) scan of the brain to further evaluate the extent of the stroke. The patient's blood pressure will be closely monitored and managed with antihypertensive medications as needed."
+    },
+    "metadata": {
+      "age": 77,
+      "gender": "M",
+      "chief_complaint": "stroke symptoms",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_007",
+    "raw_text": "The patient, a 37-year-old female, presents to the clinic with a 3-day history of dysuria, frequency, and urgency. She reports that her symptoms have been worsening over the past 24 hours, with increased burning sensation while urinating. She has tried over-the-counter pain relievers with minimal relief. Her past medical history is notable for recurrent urinary tract infections, with the most recent episode occurring 6 months ago. She is currently sexually active with one partner and uses oral contraceptives. Her temperature is 100.4\u00b0F, blood pressure is 120/80 mmHg, and pulse is 100 beats per minute. The patient appears uncomfortable and reports significant discomfort during the physical examination.",
+    "ground_truth": {
+      "subjective": "The patient reports dysuria, frequency, urgency, and a burning sensation while urinating.",
+      "objective": "Temperature: 100.4\u00b0F, Blood pressure: 120/80 mmHg, Pulse: 100 beats per minute",
+      "assessment": "Urinary tract infection",
+      "plan": "Start the patient on a 5-day course of trimethoprim-sulfamethoxazole, provide pain management with phenazopyridine, and schedule a follow-up appointment in 1 week to assess for symptom resolution"
+    },
+    "metadata": {
+      "age": 37,
+      "gender": "F",
+      "chief_complaint": "urinary tract infection",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_008",
+    "raw_text": "The patient is a 52-year-old male presenting with complaints of lower back pain that started about 3 days ago. He reports that the pain is a dull ache, worsening with movement and improving with rest. The patient has a history of heavy lifting at work and believes this may have contributed to his current condition. On examination, the patient has a limited range of motion in his lumbar spine and tenderness to palpation in the L4-L5 region. His neurological examination is otherwise intact, with no signs of radiculopathy or myelopathy. The patient's vital signs are stable, and he is afebrile. Laboratory studies, including complete blood count and basic metabolic panel, are within normal limits.",
+    "ground_truth": {
+      "subjective": "The patient reports lower back pain that is worsened by movement and improved by rest.",
+      "objective": "Limited range of motion in lumbar spine, tenderness to palpation in L4-L5 region, and stable vital signs.",
+      "assessment": "Mechanical lower back pain, likely secondary to muscle strain or lumbar disc disease.",
+      "plan": "Recommend physical therapy and pain management with acetaminophen or ibuprofen, and consider MRI of the lumbar spine if symptoms persist."
+    },
+    "metadata": {
+      "age": 52,
+      "gender": "M",
+      "chief_complaint": "lower back pain",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_009",
+    "raw_text": "The patient is a 25-year-old female who presents to the emergency department with a chief complaint of anxiety attack. She reports that she has been experiencing increased anxiety over the past week, with symptoms worsening over the past 24 hours. The patient states that she has been having trouble sleeping and has been feeling overwhelmed and irritable. She denies any recent traumatic events or significant changes in her life. On physical examination, the patient appears anxious and agitated, with a rapid heart rate and elevated blood pressure. Her oxygen saturation is 98% on room air and her temperature is 98.6 degrees Fahrenheit.",
+    "ground_truth": {
+      "subjective": "The patient reports increased anxiety over the past week, with symptoms worsening over the past 24 hours, and has been having trouble sleeping and feeling overwhelmed and irritable.",
+      "objective": "The patient appears anxious and agitated, with a rapid heart rate and elevated blood pressure, oxygen saturation is 98% on room air and temperature is 98.6 degrees Fahrenheit.",
+      "assessment": "The patient is experiencing an anxiety attack, likely triggered by underlying stress and anxiety disorders.",
+      "plan": "The patient will be treated with a benzodiazepine to help alleviate her acute anxiety symptoms, and will be referred to a psychiatrist for further evaluation and management of her underlying anxiety disorder."
+    },
+    "metadata": {
+      "age": 25,
+      "gender": "F",
+      "chief_complaint": "anxiety attack",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_010",
+    "raw_text": "The patient is a 72-year-old male who presents to the hospital with a chief complaint of worsening shortness of breath over the past 3 days. He reports that he has been experiencing increased wheezing and coughing, producing yellowish sputum. The patient has a history of COPD and has been managed with inhalers and oxygen therapy at home. His current oxygen saturation is 88% on room air, and he is afebrile. The patient's lung exam reveals bilateral wheezes and coarse crackles, and his cardiac exam is notable for a regular rate and rhythm. The patient's medications include albuterol, tiotropium, and prednisone, which he has been taking as prescribed. The patient's family reports that he has been having increased difficulty performing daily activities due to his respiratory symptoms.",
+    "ground_truth": {
+      "subjective": "The patient reports worsening shortness of breath, increased wheezing, and coughing with yellowish sputum production.",
+      "objective": "Oxygen saturation is 88% on room air, bilateral wheezes and coarse crackles on lung exam, regular rate and rhythm on cardiac exam.",
+      "assessment": "COPD exacerbation",
+      "plan": "The patient will be started on bronchodilators and corticosteroids, and his oxygen therapy will be adjusted. He will also undergo a chest X-ray and arterial blood gas analysis to further evaluate his condition."
+    },
+    "metadata": {
+      "age": 72,
+      "gender": "M",
+      "chief_complaint": "COPD exacerbation",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_011",
+    "raw_text": "The patient, a 22-year-old female, presented to the emergency department with a 2-day history of abdominal pain, primarily localized to the right lower quadrant. She reports that the pain started as a dull, diffuse pain and has since migrated to the right lower quadrant, where it is now a sharp, stabbing pain. The patient also reports experiencing nausea, vomiting, and a low-grade fever. Upon physical examination, the patient's abdomen was tender to palpation in the right lower quadrant, with rebound tenderness and guarding. The patient's white blood cell count was elevated at 15,000 cells per microliter, and her temperature was 38.2 degrees Celsius. The patient's past medical history is significant for a previous cholecystectomy, and she has no known allergies.",
+    "ground_truth": {
+      "subjective": "The patient reports a 2-day history of abdominal pain, primarily localized to the right lower quadrant, with associated nausea, vomiting, and a low-grade fever.",
+      "objective": "The patient's abdomen was tender to palpation in the right lower quadrant, with rebound tenderness and guarding, and her white blood cell count was elevated at 15,000 cells per microliter.",
+      "assessment": "The patient likely has acute appendicitis, given her clinical presentation and laboratory findings.",
+      "plan": "The patient will undergo an urgent appendectomy, and will be started on broad-spectrum antibiotics to cover for potential bacterial infection. She will also be given pain management and anti-emetic medication as needed."
+    },
+    "metadata": {
+      "age": 22,
+      "gender": "F",
+      "chief_complaint": "appendicitis",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_012",
+    "raw_text": "The patient, a 47-year-old male, presents for a follow-up on his type 2 diabetes management. He reports that he has been experiencing some polyuria and polydipsia, but his overall blood glucose levels have been well-controlled with his current medication regimen. His blood pressure has been stable, and he denies any recent episodes of hypoglycemia. On physical examination, his weight is 85 kg, height is 175 cm, and BMI is 27.8. His laboratory results show an HbA1c of 7.2%, which is slightly elevated from his previous reading of 6.8%. The patient is also due for a nephropathy screening and a comprehensive foot examination. He has been compliant with his medication regimen and has been monitoring his blood glucose levels regularly. The patient's current medications include metformin 1000 mg twice daily and lisinopril 10 mg once daily.",
+    "ground_truth": {
+      "subjective": "The patient reports experiencing polyuria and polydipsia, but his overall blood glucose levels have been well-controlled.",
+      "objective": "The patient's weight is 85 kg, height is 175 cm, BMI is 27.8, and HbA1c is 7.2%. His blood pressure has been stable.",
+      "assessment": "The patient's type 2 diabetes is generally well-controlled, but his HbA1c level is slightly elevated.",
+      "plan": "Continue current medication regimen, order a nephropathy screening, and perform a comprehensive foot examination. The patient will also be scheduled for a follow-up appointment in 3 months to monitor his blood glucose levels and adjust his treatment plan as needed."
+    },
+    "metadata": {
+      "age": 47,
+      "gender": "M",
+      "chief_complaint": "type 2 diabetes follow-up",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_013",
+    "raw_text": "The patient is a 67-year-old female who presents to the emergency department after a fall at home, reporting severe pain in her left hip. She states that she was walking to the kitchen when she slipped on a rug and fell onto her side. The patient denies any loss of consciousness or numbness in her extremities, but does report difficulty moving her left leg. Upon examination, the patient is found to have a shortened and externally rotated left leg, with significant swelling and bruising in the hip area. Her vital signs are stable, with a blood pressure of 120/80 mmHg, a heart rate of 90 bpm, and an oxygen saturation of 98% on room air. The patient's past medical history is significant for hypertension and hyperlipidemia, for which she takes metoprolol and atorvastatin. She has no known drug allergies.",
+    "ground_truth": {
+      "subjective": "The patient reports severe pain in her left hip after a fall, with difficulty moving her left leg.",
+      "objective": "The patient has a shortened and externally rotated left leg, with significant swelling and bruising in the hip area. Her vital signs are stable.",
+      "assessment": "The patient likely has a left hip fracture, which will need to be confirmed with imaging studies.",
+      "plan": "The patient will undergo a CT scan of her hip to confirm the diagnosis, and will be started on pain management with morphine. She will also be evaluated by the orthopedic surgery team for possible surgical intervention."
+    },
+    "metadata": {
+      "age": 67,
+      "gender": "F",
+      "chief_complaint": "hip fracture",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_014",
+    "raw_text": "The patient is a 29 year old male who presented to the emergency department with a chief complaint of an asthma attack. He reports that he has been experiencing worsening shortness of breath over the past 24 hours, despite using his albuterol inhaler as prescribed. The patient states that he has a history of asthma and has been hospitalized for exacerbations in the past. He denies any recent upper respiratory infections or other triggers for his asthma. On examination, the patient is found to be in mild distress, with a respiratory rate of 24 breaths per minute and an oxygen saturation of 92% on room air. His lung exam reveals bilateral wheezing and decreased air movement. The patient's past medical history is significant for asthma, allergic rhinitis, and a known allergy to penicillin.",
+    "ground_truth": {
+      "subjective": "The patient reports worsening shortness of breath over the past 24 hours, despite using his albuterol inhaler as prescribed.",
+      "objective": "Respiratory rate of 24 breaths per minute, oxygen saturation of 92% on room air, bilateral wheezing, and decreased air movement on lung exam.",
+      "assessment": "Asthma exacerbation",
+      "plan": "The patient will be treated with oxygen therapy, inhaled corticosteroids, and bronchodilators. He will also be monitored closely for any signs of worsening respiratory status."
+    },
+    "metadata": {
+      "age": 29,
+      "gender": "M",
+      "chief_complaint": "asthma attack",
+      "has_allergies": true,
+      "allergies": [
+        "penicillin"
+      ]
+    }
+  },
+  {
+    "note_id": "note_015",
+    "raw_text": "The patient, a 57-year-old female, presented to the emergency department with a chief complaint of severe headache and blurred vision. She reported that her blood pressure had been elevated for the past few days, but had significantly worsened over the past 24 hours. The patient's past medical history is notable for hypertension, hyperlipidemia, and diabetes mellitus. She is currently taking metformin, atorvastatin, and lisinopril. On physical examination, the patient's blood pressure was found to be 220/140 mmHg, with a heart rate of 100 beats per minute and a respiratory rate of 20 breaths per minute. The patient's neurological examination was notable for decreased visual acuity in both eyes, but was otherwise non-focal.",
+    "ground_truth": {
+      "subjective": "The patient reports severe headache and blurred vision, with a history of elevated blood pressure.",
+      "objective": "Elevated blood pressure (220/140 mmHg), decreased visual acuity, tachycardia (100 beats per minute), and tachypnea (20 breaths per minute).",
+      "assessment": "Hypertensive crisis, likely secondary to uncontrolled hypertension.",
+      "plan": "The patient will be started on intravenous antihypertensive therapy, with close monitoring of her blood pressure and neurological status. She will also undergo further evaluation, including laboratory studies and imaging, to rule out any secondary causes of her hypertension."
+    },
+    "metadata": {
+      "age": 57,
+      "gender": "F",
+      "chief_complaint": "hypertensive crisis",
+      "has_allergies": true,
+      "allergies": [
+        "sulfa"
+      ]
+    }
+  },
+  {
+    "note_id": "note_016",
+    "raw_text": "The patient, a 77-year-old male, presented to the emergency department with symptoms of a stroke, including numbness and weakness in his left arm and leg, as well as difficulty speaking. He reported that these symptoms began approximately 2 hours prior to arrival. The patient has a history of hypertension and hyperlipidemia, and is currently taking aspirin and atorvastatin. On physical examination, the patient was found to have a blood pressure of 180/100 mmHg, a heart rate of 90 beats per minute, and a respiratory rate of 18 breaths per minute. The patient's neurological examination was significant for decreased strength and sensation in his left arm and leg, as well as aphasia. Laboratory results showed an elevated white blood cell count and a troponin level of 0.05 ng/mL. The patient was given a dose of tPA and was admitted to the intensive care unit for further management.",
+    "ground_truth": {
+      "subjective": "The patient reports numbness and weakness in his left arm and leg, as well as difficulty speaking.",
+      "objective": "Blood pressure of 180/100 mmHg, heart rate of 90 beats per minute, respiratory rate of 18 breaths per minute, decreased strength and sensation in left arm and leg, aphasia, elevated white blood cell count, and a troponin level of 0.05 ng/mL.",
+      "assessment": "Ischemic stroke, likely due to a clot in the middle cerebral artery.",
+      "plan": "Continue tPA, admit to intensive care unit, order repeat laboratory tests and imaging studies, and consider angiography and possible intervention."
+    },
+    "metadata": {
+      "age": 77,
+      "gender": "M",
+      "chief_complaint": "stroke symptoms",
+      "has_allergies": true,
+      "allergies": [
+        "penicillin"
+      ]
+    }
+  },
+  {
+    "note_id": "note_017",
+    "raw_text": "The patient is a 37-year-old female who presents to the clinic with a 3-day history of dysuria, frequent urination, and suprapubic discomfort. She reports that her symptoms started abruptly and have been worsening over the past 48 hours. The patient denies any previous episodes of urinary tract infections, but does report a history of vaginal yeast infections. She is sexually active with one partner and uses oral contraceptives. Her temperature is 100.4 degrees Fahrenheit, blood pressure is 120/80 mmHg, and her heart rate is 90 beats per minute. The patient's urine dipstick test shows positive results for leukocyte esterase and nitrites.",
+    "ground_truth": {
+      "subjective": "The patient reports dysuria, frequent urination, and suprapubic discomfort.",
+      "objective": "The patient's temperature is 100.4 degrees Fahrenheit, blood pressure is 120/80 mmHg, and her heart rate is 90 beats per minute. The urine dipstick test shows positive results for leukocyte esterase and nitrites.",
+      "assessment": "The patient is diagnosed with a urinary tract infection.",
+      "plan": "The patient will be prescribed a 5-day course of trimethoprim-sulfamethoxazole and advised to increase fluid intake. A follow-up appointment will be scheduled in 7-10 days to assess the patient's response to treatment."
+    },
+    "metadata": {
+      "age": 37,
+      "gender": "F",
+      "chief_complaint": "urinary tract infection",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_018",
+    "raw_text": "The patient, a 52-year-old male, presents with complaints of lower back pain that has been ongoing for the past three weeks. He reports the pain started after lifting a heavy object at work and has been worsening since then. The patient describes the pain as sharp and stabbing, radiating down to his left leg. He has tried taking over-the-counter pain medication, but it has not provided significant relief. On examination, the patient has limited range of motion in his lumbar spine and tenderness to palpation in the L4-L5 region. His vital signs are within normal limits, and his neurological examination is unremarkable. The patient's medical history is significant for hypertension and hyperlipidemia, for which he is currently taking medication. He has no known allergies to medications.",
+    "ground_truth": {
+      "subjective": "The patient reports lower back pain that started after lifting a heavy object and has been worsening since then.",
+      "objective": "Limited range of motion in the lumbar spine, tenderness to palpation in the L4-L5 region, and vital signs within normal limits.",
+      "assessment": "The patient's symptoms are consistent with a lumbar strain, possibly with a herniated disk.",
+      "plan": "Order an MRI of the lumbar spine to confirm the diagnosis, prescribe physical therapy and pain management, and follow up in two weeks to assess progress."
+    },
+    "metadata": {
+      "age": 52,
+      "gender": "M",
+      "chief_complaint": "lower back pain",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_019",
+    "raw_text": "The patient is a 25-year-old female who presents to the emergency department with a chief complaint of anxiety attack. She reports feeling overwhelmed and experiencing shortness of breath, with an onset of about 2 hours prior to arrival. The patient also mentions having a history of similar episodes, but never this severe. Upon examination, the patient's vital signs are stable, with a blood pressure of 120/80 mmHg, a heart rate of 100 beats per minute, and an oxygen saturation of 98% on room air. The patient's physical exam is otherwise unremarkable, with no notable abnormalities. She does report some mild tremors and feelings of impending doom. The patient has a history of panic disorder and is currently taking sertraline, but has not been taking it as prescribed.",
+    "ground_truth": {
+      "subjective": "The patient reports feeling overwhelmed, experiencing shortness of breath, and having a history of similar episodes.",
+      "objective": "Vital signs are stable, with a blood pressure of 120/80 mmHg, a heart rate of 100 beats per minute, and an oxygen saturation of 98% on room air.",
+      "assessment": "The patient's symptoms are consistent with a panic disorder, likely exacerbated by non-adherence to her medication regimen.",
+      "plan": "The patient will be administered a dose of lorazepam to help alleviate her acute symptoms, and will be encouraged to restart her sertraline as prescribed. She will also be referred for follow-up with her primary care physician and a mental health professional."
+    },
+    "metadata": {
+      "age": 25,
+      "gender": "F",
+      "chief_complaint": "anxiety attack",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_020",
+    "raw_text": "The patient is a 72-year-old male who presents to the hospital with a chief complaint of worsening shortness of breath over the past 3 days. He reports that he has been experiencing increased wheezing and coughing, with a productive cough of yellow sputum. The patient has a history of COPD and has been on home oxygen therapy. He denies any recent travel or exposure to illness. On physical examination, the patient appears to be in mild distress, with a respiratory rate of 24 breaths per minute and an oxygen saturation of 88% on room air. His lung exam reveals bilateral wheezing and coarse crackles, with decreased air movement bilaterally. The patient's chest X-ray shows hyperinflation of the lungs with no evidence of pneumonia.",
+    "ground_truth": {
+      "subjective": "The patient reports worsening shortness of breath, increased wheezing and coughing, with a productive cough of yellow sputum.",
+      "objective": "Respiratory rate of 24 breaths per minute, oxygen saturation of 88% on room air, bilateral wheezing and coarse crackles on lung exam, and chest X-ray showing hyperinflation of the lungs.",
+      "assessment": "COPD exacerbation",
+      "plan": "The patient will be started on bronchodilators and corticosteroids, and will require oxygen therapy and close monitoring of his respiratory status. He will also undergo a thorough evaluation to determine the underlying cause of his exacerbation."
+    },
+    "metadata": {
+      "age": 72,
+      "gender": "M",
+      "chief_complaint": "COPD exacerbation",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_021",
+    "raw_text": "The patient is a 22-year-old female who presents with a 2-day history of abdominal pain, initially diffuse but now localized to the right lower quadrant. She reports that the pain is constant, worsened by movement, and accompanied by nausea and vomiting. The patient's temperature is 38.5 degrees Celsius, and she appears uncomfortable. Upon examination, the patient's abdomen is tender to palpation in the right lower quadrant, with rebound tenderness and guarding. The patient's white blood cell count is elevated at 15,000 cells per microliter. The patient's past medical history is significant for a previous cholecystectomy. The patient takes oral contraceptives and has no known allergies.",
+    "ground_truth": {
+      "subjective": "The patient reports a 2-day history of abdominal pain, nausea, and vomiting.",
+      "objective": "The patient's temperature is 38.5 degrees Celsius, abdominal tenderness, rebound tenderness, guarding, and elevated white blood cell count.",
+      "assessment": "The patient is diagnosed with acute appendicitis.",
+      "plan": "The patient will undergo an appendectomy, and broad-spectrum antibiotics will be administered. The patient will be monitored for signs of peritonitis and sepsis."
+    },
+    "metadata": {
+      "age": 22,
+      "gender": "F",
+      "chief_complaint": "appendicitis",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_022",
+    "raw_text": "Patient is a 47-year-old male who presents for follow-up of his type 2 diabetes. He reports that he has been experiencing increased thirst and urination over the past few weeks, and his home glucose monitoring has shown elevated readings. He has been adhering to his medication regimen, but has had some difficulty with dietary changes. His physical exam is notable for a BMI of 32 and blood pressure of 140/90. Laboratory results show a hemoglobin A1c of 9.2%, which is slightly elevated from his previous result of 8.5%. The patient's current medications include metformin 1000mg twice daily and lisinopril 10mg daily.",
+    "ground_truth": {
+      "subjective": "The patient reports increased thirst and urination, and has been having trouble with dietary changes.",
+      "objective": "Blood pressure of 140/90, BMI of 32, and hemoglobin A1c of 9.2%",
+      "assessment": "Uncontrolled type 2 diabetes",
+      "plan": "Increase metformin to 1000mg three times daily, refer to a registered dietitian for nutrition counseling, and schedule a follow-up appointment in 3 months"
+    },
+    "metadata": {
+      "age": 47,
+      "gender": "M",
+      "chief_complaint": "type 2 diabetes follow-up",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_023",
+    "raw_text": "The patient, a 67-year-old female, was admitted to the hospital after a fall at home, resulting in a hip fracture. She reports that she was getting out of bed when she felt a sudden pain in her right hip and was unable to bear weight on it. The patient has a history of osteoporosis and has been experiencing increasing back pain over the past few months. On physical examination, the patient's right hip is tender to palpation, with limited range of motion and shortening of the leg. The patient's vital signs are stable, with a blood pressure of 120/80 mmHg, a heart rate of 80 bpm, and an oxygen saturation of 98% on room air. The patient is currently being treated with oxygen, IV fluids, and pain medication. An X-ray of the hip has been ordered to confirm the fracture and determine the best course of treatment.",
+    "ground_truth": {
+      "subjective": "The patient reports a sudden onset of hip pain after a fall, with an inability to bear weight on the affected leg.",
+      "objective": "Tender to palpation, limited range of motion, and shortening of the leg, with stable vital signs.",
+      "assessment": "Hip fracture, likely due to osteoporosis and the recent fall.",
+      "plan": "Order an X-ray to confirm the fracture, start pain management with medication, and consider surgical intervention if necessary."
+    },
+    "metadata": {
+      "age": 67,
+      "gender": "F",
+      "chief_complaint": "hip fracture",
+      "has_allergies": true,
+      "allergies": [
+        "penicillin"
+      ]
+    }
+  },
+  {
+    "note_id": "note_024",
+    "raw_text": "The patient is a 29-year-old male who presented to the emergency department with complaints of shortness of breath and wheezing. He reports that his symptoms started earlier today and have been worsening over the past few hours. He has a history of asthma and has been using his inhaler as prescribed, but it has not been providing adequate relief. On physical examination, the patient is noted to be in mild distress, with a respiratory rate of 24 breaths per minute and a pulse oximetry reading of 92% on room air. His lung exam reveals bilateral wheezing and decreased air movement. The patient's past medical history is also notable for allergic rhinitis and eczema. He has no known drug allergies.",
+    "ground_truth": {
+      "subjective": "The patient reports shortness of breath and wheezing that started earlier today and have been worsening over the past few hours.",
+      "objective": "Respiratory rate of 24 breaths per minute, pulse oximetry reading of 92% on room air, bilateral wheezing, and decreased air movement on lung exam.",
+      "assessment": "Asthma exacerbation",
+      "plan": "The patient will be treated with oxygen, albuterol via nebulizer, and oral corticosteroids. He will also be given a dose of ipratropium bromide via nebulizer. The patient will be monitored closely for improvement in his symptoms and will be discharged home once his symptoms have improved and he is able to manage his condition with his home medications."
+    },
+    "metadata": {
+      "age": 29,
+      "gender": "M",
+      "chief_complaint": "asthma attack",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_025",
+    "raw_text": "The patient, a 58-year-old female, presented to the emergency department with a chief complaint of severe headache and dizziness. She reported that her symptoms started suddenly, about 2 hours prior to arrival, and have been worsening since then. Upon further questioning, she stated that she has a history of hypertension, but has not been taking her medication as prescribed. Her blood pressure was found to be significantly elevated at 220/120 mmHg. The patient's past medical history is also notable for hyperlipidemia and diabetes mellitus. She is currently experiencing some shortness of breath and chest discomfort. Laboratory results show elevated troponin levels and an electrocardiogram revealed left ventricular hypertrophy. The patient is awake, alert, and oriented, but appears distressed and anxious.",
+    "ground_truth": {
+      "subjective": "The patient reports severe headache, dizziness, shortness of breath, and chest discomfort.",
+      "objective": "Blood pressure 220/120 mmHg, elevated troponin levels, left ventricular hypertrophy on electrocardiogram.",
+      "assessment": "Hypertensive crisis with potential cardiac involvement.",
+      "plan": "Administer intravenous antihypertensive medication, obtain cardiology consultation, and consider admission to the intensive care unit for close monitoring."
+    },
+    "metadata": {
+      "age": 58,
+      "gender": "F",
+      "chief_complaint": "hypertensive crisis",
+      "has_allergies": true,
+      "allergies": [
+        "penicillin"
+      ]
+    }
+  },
+  {
+    "note_id": "note_026",
+    "raw_text": "The patient, a 78-year-old male, presented to the emergency department with sudden onset of right-sided weakness and slurred speech. He reports that he was watching TV when he noticed his right arm and leg felt heavy and he was having trouble speaking. His wife, who was with him at the time, stated that he seemed confused and disoriented. The patient has a history of hypertension and hyperlipidemia, and is currently taking aspirin and atorvastatin. He denies any recent travel or illness, and his review of systems is otherwise negative. On physical examination, the patient is alert and oriented, but has noticeable right-sided hemiparesis and dysarthria. His vital signs are stable, with a blood pressure of 140/80 and a heart rate of 80. The patient's wife reports that he has been experiencing some memory loss and confusion over the past few weeks, but this is the first time he has had any significant neurological symptoms.",
+    "ground_truth": {
+      "subjective": "The patient reports sudden onset of right-sided weakness and slurred speech, and his wife reports that he seemed confused and disoriented.",
+      "objective": "Right-sided hemiparesis and dysarthria, stable vital signs with a blood pressure of 140/80 and a heart rate of 80.",
+      "assessment": "Acute ischemic stroke, likely secondary to atherosclerotic disease given the patient's history of hypertension and hyperlipidemia.",
+      "plan": "Order a stat head CT to rule out hemorrhage, and consider thrombolytic therapy if the patient is within the time window. Also, order a comprehensive metabolic panel and complete blood count to rule out any underlying metabolic or infectious causes. Admit the patient to the neurology service for further management and rehabilitation."
+    },
+    "metadata": {
+      "age": 78,
+      "gender": "M",
+      "chief_complaint": "stroke symptoms",
+      "has_allergies": true,
+      "allergies": [
+        "penicillin"
+      ]
+    }
+  },
+  {
+    "note_id": "note_027",
+    "raw_text": "The patient, a 37-year-old female, presents to the hospital with a complaint of dysuria and frequent urination over the past 3 days. She reports experiencing severe burning sensations while urinating and a strong urge to urinate, even when her bladder is empty. The patient also mentions having noticed a mild fever and abdominal discomfort in the lower pelvic region. Her medical history is significant for recurrent urinary tract infections, with the most recent episode occurring 6 months ago. The patient has been taking over-the-counter pain relievers to manage her symptoms, but they have provided minimal relief. Upon physical examination, the patient's vital signs are within normal limits, except for a mildly elevated temperature of 99.5\u00b0F. A urinalysis is pending, but the patient's symptoms and physical examination are consistent with a urinary tract infection.",
+    "ground_truth": {
+      "subjective": "The patient reports dysuria, frequent urination, burning sensations while urinating, and a strong urge to urinate.",
+      "objective": "Mildly elevated temperature of 99.5\u00b0F, pending urinalysis.",
+      "assessment": "Urinary tract infection",
+      "plan": "Initiate antibiotic therapy, obtain urinalysis results, and schedule a follow-up appointment to assess treatment efficacy."
+    },
+    "metadata": {
+      "age": 37,
+      "gender": "F",
+      "chief_complaint": "urinary tract infection",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_028",
+    "raw_text": "The patient is a 52-year-old male who presents to the clinic with a complaint of lower back pain that has been ongoing for the past 3 weeks. He reports that the pain is a dull ache that radiates down his left leg and is worsened by activity and improved by rest. The patient also mentions that he has been experiencing some numbness and tingling in his left foot. He has a history of lifting heavy objects at work and thinks that this may have contributed to his current condition. His past medical history is significant for hypertension and hyperlipidemia, for which he takes medication. The patient's review of systems is otherwise negative. On physical examination, the patient has tenderness to palpation over the lower lumbar spine and decreased range of motion. He also has weakness in his left leg, graded as 4/5. The patient's vital signs are within normal limits.",
+    "ground_truth": {
+      "subjective": "The patient reports lower back pain that radiates down his left leg, worsened by activity and improved by rest, with associated numbness and tingling in his left foot.",
+      "objective": "Tenderness to palpation over the lower lumbar spine, decreased range of motion, weakness in left leg (4/5), and vital signs within normal limits.",
+      "assessment": "Lumbar strain or possible herniated disc, given the patient's history of lifting heavy objects and physical examination findings.",
+      "plan": "Order an MRI of the lumbar spine to further evaluate for a herniated disc, prescribe physical therapy and pain management, and follow up in 2 weeks to reassess the patient's condition."
+    },
+    "metadata": {
+      "age": 52,
+      "gender": "M",
+      "chief_complaint": "lower back pain",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_029",
+    "raw_text": "The patient, a 25-year-old female, presented to the emergency department with a chief complaint of anxiety attack. She reports feeling overwhelmed and experiencing shortness of breath, which started about an hour ago. The patient has a history of anxiety and has been experiencing increased stress at work and home. She denies any chest pain or other symptoms, but does report feeling like she is going to pass out. The patient's vital signs are within normal limits, with a blood pressure of 120/80 and a pulse of 100. She is afebrile and her oxygen saturation is 98% on room air. The patient is alert and oriented, but appears anxious and agitated.",
+    "ground_truth": {
+      "subjective": "The patient reports feeling overwhelmed and experiencing shortness of breath, which started about an hour ago. She has a history of anxiety and has been experiencing increased stress at work and home.",
+      "objective": "Vital signs are within normal limits, with a blood pressure of 120/80 and a pulse of 100. The patient is afebrile and her oxygen saturation is 98% on room air.",
+      "assessment": "The patient is experiencing an anxiety attack, likely triggered by increased stress at work and home.",
+      "plan": "The patient will be treated with a benzodiazepine and will be referred for follow-up with a mental health professional. She will also be given information on stress management and relaxation techniques."
+    },
+    "metadata": {
+      "age": 25,
+      "gender": "F",
+      "chief_complaint": "anxiety attack",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_030",
+    "raw_text": "The patient is a 72-year-old male presenting with increased shortness of breath and wheezing over the past 3 days. He reports waking up at night feeling like he cannot catch his breath and has been using his inhaler more frequently. His oxygen saturation is 88% on room air, and he is afebrile. The patient has a history of COPD and has been hospitalized for exacerbations in the past. He is currently on oxygen therapy and is being treated with bronchodilators and corticosteroids. The patient's lung exam reveals bilateral wheezing and decreased breath sounds. Chest X-ray shows hyperinflation of the lungs consistent with COPD.",
+    "ground_truth": {
+      "subjective": "The patient reports increased shortness of breath and wheezing over the past 3 days, using his inhaler more frequently, and waking up at night feeling like he cannot catch his breath.",
+      "objective": "Oxygen saturation is 88% on room air, afebrile, bilateral wheezing, and decreased breath sounds on lung exam, chest X-ray shows hyperinflation of the lungs.",
+      "assessment": "COPD exacerbation",
+      "plan": "Continue oxygen therapy, bronchodilators, and corticosteroids, monitor oxygen saturation and lung exam, consider adjusting treatment as needed."
+    },
+    "metadata": {
+      "age": 72,
+      "gender": "M",
+      "chief_complaint": "COPD exacerbation",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_031",
+    "raw_text": "The patient, a 22-year-old female, presents to the emergency department with a chief complaint of severe abdominal pain, specifically localized to the right lower quadrant. She reports that the pain began approximately 12 hours prior to admission and has been worsening over time. The patient also reports experiencing nausea, vomiting, and a low-grade fever. Upon physical examination, the patient is noted to be tender to palpation in the right lower quadrant, with rebound tenderness also present. Laboratory results reveal an elevated white blood cell count, consistent with an infectious or inflammatory process. The patient's past medical history is notable for a previous cholecystectomy, but she has no known allergies. The patient is currently taking no medications.",
+    "ground_truth": {
+      "subjective": "The patient reports severe abdominal pain, nausea, vomiting, and a low-grade fever.",
+      "objective": "The patient is tender to palpation in the right lower quadrant, with rebound tenderness present. Laboratory results reveal an elevated white blood cell count.",
+      "assessment": "The patient is diagnosed with acute appendicitis.",
+      "plan": "The patient will undergo an emergent appendectomy and be started on broad-spectrum antibiotics. Post-operative care will include monitoring for signs of infection or complications."
+    },
+    "metadata": {
+      "age": 22,
+      "gender": "F",
+      "chief_complaint": "appendicitis",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_032",
+    "raw_text": "The patient is a 47-year-old male who presents for a follow-up appointment regarding his type 2 diabetes. He reports feeling generally well, but has noticed some increased thirst and urination over the past few weeks. His current medications include metformin 1000mg twice daily and atorvastatin 20mg daily. He has been trying to watch his diet and exercise more, but admits to having trouble sticking to his regimen. His blood glucose log shows some elevated readings, with a average blood glucose of 180mg/dL over the past week. He denies any symptoms of hypoglycemia or hyperglycemia, but does report some numbness in his toes. On physical exam, his blood pressure is 130/80mmHg, pulse is 80bpm, and his BMI is 32. His lab results show an HbA1c of 8.5%, which is slightly elevated from his previous result. We will need to adjust his medication regimen and provide additional education on diabetes management.",
+    "ground_truth": {
+      "subjective": "The patient reports increased thirst and urination, and has been having trouble sticking to his diet and exercise regimen. He also reports some numbness in his toes.",
+      "objective": "Blood glucose log shows an average blood glucose of 180mg/dL, blood pressure is 130/80mmHg, pulse is 80bpm, BMI is 32, and HbA1c is 8.5%. Physical exam is otherwise unremarkable.",
+      "assessment": "Type 2 diabetes, poorly controlled. Possible early signs of peripheral neuropathy.",
+      "plan": "Increase metformin to 1000mg three times daily, add pioglitazone 15mg daily, and refer to diabetes education program for additional guidance on diet and exercise. Also, refer to neurology for evaluation of numbness in toes."
+    },
+    "metadata": {
+      "age": 47,
+      "gender": "M",
+      "chief_complaint": "type 2 diabetes follow-up",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_033",
+    "raw_text": "The patient is a 67-year-old female who was admitted to the hospital after a fall at home, resulting in a hip fracture. She reports that she was walking to the kitchen when she slipped on a rug and fell onto her right side. The patient complains of severe pain in her right hip and is unable to bear weight on that leg. She has a history of osteoporosis and has been taking calcium supplements for the past year. Her vital signs are stable, with a blood pressure of 120/80 mmHg, a heart rate of 80 bpm, and an oxygen saturation of 98% on room air. The patient's past medical history is also significant for hypertension and hyperlipidemia, for which she takes lisinopril and atorvastatin. The patient's family reports that she has been experiencing some confusion and disorientation since the fall, but this has been improving with time.",
+    "ground_truth": {
+      "subjective": "The patient reports severe pain in her right hip and is unable to bear weight on that leg. She also reports some confusion and disorientation since the fall.",
+      "objective": "The patient has a hip fracture, with stable vital signs and a history of osteoporosis. Her lab results show a slightly elevated white blood cell count, but her electrolyte panel is within normal limits.",
+      "assessment": "The patient has a right hip fracture, likely due to her osteoporosis and the fall at home. She also has a history of hypertension and hyperlipidemia, which will need to be managed during her hospital stay.",
+      "plan": "The patient will undergo surgery to repair the hip fracture, with a planned open reduction and internal fixation. She will also be started on a course of physical therapy to improve her mobility and strength. Her hypertension and hyperlipidemia will be managed with her current medications, and she will be monitored for any signs of infection or other complications."
+    },
+    "metadata": {
+      "age": 67,
+      "gender": "F",
+      "chief_complaint": "hip fracture",
+      "has_allergies": true,
+      "allergies": [
+        "penicillin"
+      ]
+    }
+  },
+  {
+    "note_id": "note_034",
+    "raw_text": "The patient, a 28-year-old male, presented to the emergency department at 2am with complaints of worsening shortness of breath and wheezing over the past 4 hours. He reports that he has a history of asthma and has been using his inhaler more frequently than usual over the past week. The patient's symptoms started after he was exposed to dust while cleaning his apartment. Upon physical examination, the patient was found to be in mild distress, with a respiratory rate of 24 breaths per minute and a pulse of 110 beats per minute. His oxygen saturation was 92% on room air, and lung auscultation revealed bilateral wheezing. The patient's peak flow was 250 liters per minute, which is significantly lower than his personal best. He has no known allergies, but he does report a family history of asthma and eczema.",
+    "ground_truth": {
+      "subjective": "The patient reports worsening shortness of breath and wheezing over the past 4 hours, which started after exposure to dust.",
+      "objective": "Respiratory rate of 24 breaths per minute, pulse of 110 beats per minute, oxygen saturation of 92% on room air, bilateral wheezing, and peak flow of 250 liters per minute.",
+      "assessment": "Asthma exacerbation",
+      "plan": "The patient will be treated with oxygen therapy, inhaled beta-agonists, and oral corticosteroids. He will also be given a prescription for a short-acting inhaler and a follow-up appointment with his primary care physician in 1 week."
+    },
+    "metadata": {
+      "age": 28,
+      "gender": "M",
+      "chief_complaint": "asthma attack",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_035",
+    "raw_text": "The patient is a 57-year-old female who presents to the emergency department with a chief complaint of a hypertensive crisis. She reports experiencing severe headaches and dizziness over the past 24 hours. Her blood pressure is currently 220/140 mmHg. She has a history of hypertension, hyperlipidemia, and diabetes mellitus. The patient's medication regimen includes lisinopril, atorvastatin, and metformin. She has been non-compliant with her medication regimen for the past week. The patient's physical examination reveals no focal neurological deficits, but she does have mild pedal edema bilaterally. Laboratory results reveal a serum creatinine of 1.2 mg/dL and a potassium level of 4.5 mEq/L.",
+    "ground_truth": {
+      "subjective": "The patient reports experiencing severe headaches and dizziness over the past 24 hours.",
+      "objective": "Blood pressure is 220/140 mmHg, serum creatinine is 1.2 mg/dL, and potassium level is 4.5 mEq/L.",
+      "assessment": "Hypertensive crisis, likely secondary to non-compliance with antihypertensive medication regimen.",
+      "plan": "Administer intravenous antihypertensive medication, obtain urgent cardiology consultation, and consider hospital admission for further management."
+    },
+    "metadata": {
+      "age": 57,
+      "gender": "F",
+      "chief_complaint": "hypertensive crisis",
+      "has_allergies": true,
+      "allergies": [
+        "sulfa"
+      ]
+    }
+  },
+  {
+    "note_id": "note_036",
+    "raw_text": "The patient is an 80-year-old male who presents to the emergency department with sudden onset of right-sided weakness and slurred speech. He reports that the symptoms started approximately 2 hours ago, while he was watching TV. The patient has a history of hypertension and hyperlipidemia, and is currently taking aspirin and atorvastatin. Upon examination, the patient has a blood pressure of 180/100 mmHg, a heart rate of 90 bpm, and an oxygen saturation of 95% on room air. The patient's neurological examination reveals a decreased level of consciousness, with a Glasgow Coma Scale score of 12, and significant weakness in the right upper and lower extremities. The patient's wife reports that he has been experiencing some difficulty with speech and swallowing over the past few hours. A non-contrast CT scan of the head was ordered, which revealed a large left middle cerebral artery infarction.",
+    "ground_truth": {
+      "subjective": "The patient reports sudden onset of right-sided weakness and slurred speech.",
+      "objective": "Decreased level of consciousness, significant weakness in the right upper and lower extremities, blood pressure of 180/100 mmHg, heart rate of 90 bpm, oxygen saturation of 95% on room air, and a large left middle cerebral artery infarction on non-contrast CT scan.",
+      "assessment": "Ischemic stroke due to large left middle cerebral artery infarction.",
+      "plan": "The patient will be admitted to the intensive care unit for close monitoring and management of his blood pressure and neurological status. He will be started on a heparin drip and a statin, and will undergo a thorough evaluation to determine the cause of his stroke. The patient's family will be educated on the importance of follow-up appointments and medication adherence."
+    },
+    "metadata": {
+      "age": 80,
+      "gender": "M",
+      "chief_complaint": "stroke symptoms",
+      "has_allergies": true,
+      "allergies": [
+        "penicillin"
+      ]
+    }
+  },
+  {
+    "note_id": "note_037",
+    "raw_text": "The patient is a 37-year-old female who presents to the hospital with a 3-day history of dysuria, frequency, and urgency. She reports that the pain is primarily located in the suprapubic region and radiates to her lower back. The patient also mentions that she has been experiencing fever and chills, with a maximum temperature of 101.5 degrees Fahrenheit. Her past medical history is significant for recurrent urinary tract infections, with the most recent episode occurring 6 months ago. The patient's vital signs are as follows: blood pressure 120/80 mmHg, heart rate 100 bpm, respiratory rate 20 breaths per minute, and oxygen saturation 98% on room air. The physical examination reveals a tender suprapubic region, with no other significant findings. The patient's urinalysis results show the presence of leukocyte esterase, nitrites, and 20-30 white blood cells per high-power field.",
+    "ground_truth": {
+      "subjective": "The patient reports dysuria, frequency, urgency, fever, and chills.",
+      "objective": "The patient's vital signs are stable, with a blood pressure of 120/80 mmHg, heart rate of 100 bpm, respiratory rate of 20 breaths per minute, and oxygen saturation of 98% on room air. The urinalysis results show the presence of leukocyte esterase, nitrites, and 20-30 white blood cells per high-power field.",
+      "assessment": "The patient is diagnosed with a urinary tract infection, likely caused by a bacterial pathogen.",
+      "plan": "The patient will be started on a 7-day course of trimethoprim-sulfamethoxazole, with a dose of 160/800 mg orally twice daily. The patient will also be encouraged to increase her fluid intake and take urinary analgesics as needed for symptom relief. A follow-up appointment will be scheduled in 1 week to assess the patient's response to treatment."
+    },
+    "metadata": {
+      "age": 37,
+      "gender": "F",
+      "chief_complaint": "urinary tract infection",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_038",
+    "raw_text": "The patient is a 52-year-old male who presents with a complaint of lower back pain that has been ongoing for several weeks. He reports that the pain is a dull ache and is worsened by bending or heavy lifting. He has tried taking ibuprofen with some relief, but the pain persists. On examination, the patient's vital signs are within normal limits, and his neurological examination is non-focal. He has tenderness to palpation over the lumbar spine, but no radiation of pain to the lower extremities. The patient's past medical history is significant for hypertension and hyperlipidemia, and he is currently taking atorvastatin and lisinopril. He has no known allergies to medications.",
+    "ground_truth": {
+      "subjective": "The patient reports lower back pain that is worsened by bending or heavy lifting, with some relief from ibuprofen.",
+      "objective": "Tenderness to palpation over the lumbar spine, non-focal neurological examination, and vital signs within normal limits.",
+      "assessment": "The patient's presentation is consistent with lumbar strain or possible degenerative disc disease.",
+      "plan": "Order an MRI of the lumbar spine to evaluate for degenerative changes, and prescribe physical therapy and a muscle relaxant as needed. Follow up in 2 weeks to reassess symptoms and adjust treatment plan as necessary."
+    },
+    "metadata": {
+      "age": 52,
+      "gender": "M",
+      "chief_complaint": "lower back pain",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_039",
+    "raw_text": "The patient is a 25-year-old female who presents to the emergency department with a chief complaint of anxiety attack. She reports that she has been experiencing increased anxiety over the past week, with symptoms worsening over the past 24 hours. The patient states that she has been having trouble sleeping and has been experiencing palpitations, shortness of breath, and feelings of impending doom. She denies any recent travel or changes in her daily routine. Her vital signs are stable, with a blood pressure of 120/80, a heart rate of 100, and an oxygen saturation of 98% on room air. The patient's physical exam is unremarkable, with no focal deficits noted.",
+    "ground_truth": {
+      "subjective": "The patient reports increased anxiety over the past week, with symptoms worsening over the past 24 hours, including trouble sleeping, palpitations, shortness of breath, and feelings of impending doom.",
+      "objective": "Vital signs are stable, with a blood pressure of 120/80, a heart rate of 100, and an oxygen saturation of 98% on room air. Physical exam is unremarkable, with no focal deficits noted.",
+      "assessment": "The patient's symptoms are consistent with an anxiety disorder, likely exacerbated by an acute anxiety attack.",
+      "plan": "The patient will be started on a benzodiazepine for acute anxiety management, and will be referred to outpatient psychiatric services for further evaluation and management. She will also be encouraged to engage in stress-reducing activities, such as meditation and deep breathing exercises."
+    },
+    "metadata": {
+      "age": 25,
+      "gender": "F",
+      "chief_complaint": "anxiety attack",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_040",
+    "raw_text": "The patient is a 72-year-old male who presented to the emergency department with a 3-day history of worsening shortness of breath and increased sputum production. He reports that his symptoms have been escalating over the past week, despite using his inhalers as directed. The patient has a long history of COPD, with multiple prior exacerbations requiring hospitalization. He also has a history of hypertension and hyperlipidemia, for which he takes lisinopril and atorvastatin. On physical examination, the patient was found to be in mild respiratory distress, with a respiratory rate of 24 breaths per minute and an oxygen saturation of 88% on room air. His lung exam revealed bilateral wheezing and rhonchi, with decreased air movement bilaterally. The patient's chest X-ray showed hyperinflation of the lungs with no evidence of pneumonia. His arterial blood gas revealed a pH of 7.32, a paCO2 of 55, and a paO2 of 60. The patient was started on oxygen therapy, with a target oxygen saturation of 92-95%, and was also started on azithromycin and prednisone for treatment of his COPD exacerbation.",
+    "ground_truth": {
+      "subjective": "The patient reports worsening shortness of breath and increased sputum production over the past 3 days.",
+      "objective": "The patient has a respiratory rate of 24 breaths per minute, an oxygen saturation of 88% on room air, bilateral wheezing and rhonchi, and decreased air movement bilaterally. His arterial blood gas revealed a pH of 7.32, a paCO2 of 55, and a paO2 of 60.",
+      "assessment": "The patient has a COPD exacerbation, likely triggered by a respiratory infection.",
+      "plan": "The patient will be treated with oxygen therapy, azithromycin, and prednisone. He will also be monitored closely for any signs of clinical deterioration, and his respiratory status will be reassessed frequently."
+    },
+    "metadata": {
+      "age": 72,
+      "gender": "M",
+      "chief_complaint": "COPD exacerbation",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_041",
+    "raw_text": "The patient is a 22-year-old female who presents to the emergency department with a 2-day history of abdominal pain, initially diffuse and now localized to the right lower quadrant. She reports that the pain is constant, worsened by movement, and accompanied by nausea and vomiting. She has had a low-grade fever and has not had any bowel movements in the past 24 hours. On physical examination, the patient appears uncomfortable, with tenderness to palpation in the right lower quadrant and guarding. The patient's vitals are stable, with a temperature of 99.5 degrees Fahrenheit, heart rate of 105 beats per minute, and blood pressure of 120/80 mmHg. Laboratory results show a white blood cell count of 15,000 cells per microliter. The patient has no significant past medical history and is not taking any medications.",
+    "ground_truth": {
+      "subjective": "The patient reports a 2-day history of abdominal pain, initially diffuse and now localized to the right lower quadrant, accompanied by nausea, vomiting, and low-grade fever.",
+      "objective": "Tenderness to palpation in the right lower quadrant, guarding, white blood cell count of 15,000 cells per microliter, and stable vitals.",
+      "assessment": "The patient is diagnosed with acute appendicitis.",
+      "plan": "The patient will be taken to the operating room for an appendectomy, and will receive intravenous antibiotics and fluids prior to surgery."
+    },
+    "metadata": {
+      "age": 22,
+      "gender": "F",
+      "chief_complaint": "appendicitis",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_042",
+    "raw_text": "The patient, a 47-year-old male, presents for a follow-up on his type 2 diabetes. He reports that he has been experiencing increased thirst and urination over the past few weeks, despite adhering to his medication regimen. His blood glucose levels have been fluctuating, with a recent reading of 180 mg/dL. The patient also mentions that he has been having some difficulty managing his diet and exercise routine due to work-related stress. On physical examination, the patient's blood pressure is 130/80 mmHg and his body mass index is 32. The patient's medications include metformin 1000 mg twice daily and lisinopril 10 mg once daily. Laboratory results show a hemoglobin A1c level of 8.5% and a creatinine level of 1.2 mg/dL. The patient's kidney function is being closely monitored due to his history of diabetic nephropathy.",
+    "ground_truth": {
+      "subjective": "The patient reports increased thirst and urination, and difficulty managing his diet and exercise routine due to work-related stress.",
+      "objective": "Blood glucose level of 180 mg/dL, blood pressure of 130/80 mmHg, body mass index of 32, hemoglobin A1c level of 8.5%, and creatinine level of 1.2 mg/dL.",
+      "assessment": "The patient's type 2 diabetes is not well-controlled, and he is at risk for complications such as diabetic nephropathy and cardiovascular disease.",
+      "plan": "Adjust the patient's medication regimen to include a sulfonylurea, and refer him to a registered dietitian for personalized dietary counseling. The patient will also be scheduled for a follow-up appointment in 3 months to monitor his blood glucose levels and kidney function."
+    },
+    "metadata": {
+      "age": 47,
+      "gender": "M",
+      "chief_complaint": "type 2 diabetes follow-up",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_043",
+    "raw_text": "The patient is a 67-year-old female who presents with a chief complaint of severe hip pain after a fall at home. She reports that she was walking to the kitchen when she slipped on a rug and fell onto her right side. The patient states that she has been experiencing significant pain and difficulty bearing weight on her right leg since the incident. Upon physical examination, the patient is found to have limited range of motion in her right hip and significant tenderness to palpation. Her vital signs are stable, with a blood pressure of 120/80 mmHg, a heart rate of 90 beats per minute, and an oxygen saturation of 98% on room air. The patient's past medical history is significant for hypertension and hyperlipidemia, for which she takes lisinopril and atorvastatin, respectively. She has no known allergies to medications.",
+    "ground_truth": {
+      "subjective": "The patient reports severe hip pain and difficulty bearing weight on her right leg after a fall at home.",
+      "objective": "Limited range of motion in the right hip, significant tenderness to palpation, and stable vital signs.",
+      "assessment": "The patient likely has a right hip fracture, which will need to be confirmed with imaging studies.",
+      "plan": "Order a right hip X-ray to confirm the diagnosis, and consider consulting orthopedics for possible surgical intervention. The patient will also need to be started on pain management and undergo physical therapy to improve mobility."
+    },
+    "metadata": {
+      "age": 67,
+      "gender": "F",
+      "chief_complaint": "hip fracture",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_044",
+    "raw_text": "The patient is a 30-year-old male who presented to the emergency department with a chief complaint of worsening shortness of breath over the past 24 hours. He reports that he has a history of asthma and has been experiencing increased symptoms over the past few days, despite using his albuterol inhaler as directed. The patient also reports that he has been experiencing a cough and wheezing, and has had to use his rescue inhaler multiple times per day. On physical examination, the patient is found to be in mild distress, with a respiratory rate of 24 breaths per minute and an oxygen saturation of 92% on room air. Lung auscultation reveals bilateral wheezing and coarse rhonchi, and the patient's peak expiratory flow rate is 150 L/min. The patient's medical history is significant for asthma, and he has no known allergies.",
+    "ground_truth": {
+      "subjective": "The patient reports worsening shortness of breath, cough, and wheezing over the past few days, despite using his albuterol inhaler as directed.",
+      "objective": "Respiratory rate of 24 breaths per minute, oxygen saturation of 92% on room air, bilateral wheezing and coarse rhonchi on lung auscultation, peak expiratory flow rate of 150 L/min",
+      "assessment": "Asthma exacerbation",
+      "plan": "The patient will be treated with oxygen therapy, inhaled corticosteroids, and bronchodilators, and will be monitored closely for signs of clinical improvement or deterioration."
+    },
+    "metadata": {
+      "age": 30,
+      "gender": "M",
+      "chief_complaint": "asthma attack",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_045",
+    "raw_text": "Patient is a 57-year-old female who presents to the emergency department with a chief complaint of hypertensive crisis. She reports experiencing severe headaches and dizziness over the past 24 hours, with a significant increase in blood pressure readings at home. The patient's blood pressure upon arrival was 220/140 mmHg. She has a history of hypertension, hyperlipidemia, and diabetes mellitus. The patient is currently taking lisinopril, metformin, and atorvastatin. She denies any chest pain, shortness of breath, or cough. The patient's physical exam is notable for a grade 2/6 systolic ejection murmur heard at the left upper sternal border. Laboratory results reveal a serum creatinine of 1.2 mg/dL and a potassium level of 4.5 mEq/L. The patient's electrocardiogram shows left ventricular hypertrophy with strain pattern.",
+    "ground_truth": {
+      "subjective": "The patient reports experiencing severe headaches and dizziness over the past 24 hours.",
+      "objective": "Blood pressure 220/140 mmHg, grade 2/6 systolic ejection murmur, serum creatinine 1.2 mg/dL, potassium 4.5 mEq/L, electrocardiogram shows left ventricular hypertrophy with strain pattern.",
+      "assessment": "The patient is experiencing a hypertensive crisis, likely secondary to uncontrolled hypertension.",
+      "plan": "The patient will be started on intravenous antihypertensive therapy with sodium nitroprusside, with titration to achieve a target blood pressure of less than 160/100 mmHg. The patient will also undergo further evaluation with a renal ultrasound and a cardiology consultation."
+    },
+    "metadata": {
+      "age": 57,
+      "gender": "F",
+      "chief_complaint": "hypertensive crisis",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_046",
+    "raw_text": "The patient is an 80-year-old male who presented to the emergency department with symptoms of a stroke, including sudden weakness and numbness in his left arm and leg. He reports that the symptoms began approximately 2 hours prior to arrival. The patient has a history of hypertension and hyperlipidemia, and is currently taking aspirin and atorvastatin. On examination, the patient is alert and oriented, but has notable weakness in his left upper and lower extremities, with decreased sensation to light touch. His blood pressure is 180/100 mmHg, and his heart rate is 90 beats per minute. The patient's wife reports that he has been experiencing some confusion and difficulty with speech over the past hour. A CT scan of the head was ordered, which showed evidence of an acute ischemic stroke. The patient was immediately started on tissue plasminogen activator (tPA) and admitted to the ICU for close monitoring.",
+    "ground_truth": {
+      "subjective": "The patient reports sudden weakness and numbness in his left arm and leg, as well as confusion and difficulty with speech.",
+      "objective": "Notable weakness in left upper and lower extremities, decreased sensation to light touch, blood pressure 180/100 mmHg, heart rate 90 beats per minute, and CT scan showing evidence of an acute ischemic stroke.",
+      "assessment": "Acute ischemic stroke",
+      "plan": "The patient was started on tPA and admitted to the ICU for close monitoring, and will undergo further evaluation and treatment as needed."
+    },
+    "metadata": {
+      "age": 80,
+      "gender": "M",
+      "chief_complaint": "stroke symptoms",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_047",
+    "raw_text": "The patient, a 37-year-old female, presents with symptoms of a urinary tract infection, including dysuria, frequent urination, and supra-pubic discomfort. She reports that her symptoms started 3 days ago and have been worsening since then. She has tried over-the-counter pain relievers with minimal relief. Upon physical examination, the patient's vital signs are within normal limits, but she exhibits tenderness in the supra-pubic region. Her urine dipstick test shows positive results for leukocyte esterase and nitrites, indicating a bacterial infection. The patient's past medical history is significant for recurrent urinary tract infections, with her last episode occurring 6 months ago. She has no known allergies to antibiotics.",
+    "ground_truth": {
+      "subjective": "The patient reports dysuria, frequent urination, and supra-pubic discomfort.",
+      "objective": "Vital signs are within normal limits, supra-pubic tenderness, and urine dipstick test positive for leukocyte esterase and nitrites.",
+      "assessment": "Urinary tract infection, likely bacterial in nature.",
+      "plan": "Prescribe a 5-day course of antibiotics, such as trimethoprim-sulfamethoxazole, and recommend increasing fluid intake to help flush out the infection. Follow-up appointment in 1 week to assess treatment efficacy."
+    },
+    "metadata": {
+      "age": 37,
+      "gender": "F",
+      "chief_complaint": "urinary tract infection",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_048",
+    "raw_text": "The patient is a 52-year-old male presenting with lower back pain that has been ongoing for the past 3 weeks. He reports that the pain is constant and worsens with activity, particularly lifting or bending. The patient also mentions that he has been experiencing some numbness and tingling in his left leg. He has tried taking ibuprofen and applying heat to the area, but the pain persists. The patient's medical history is significant for hypertension and hyperlipidemia, for which he is currently taking lisinopril and atorvastatin. He has no known allergies and is a non-smoker.",
+    "ground_truth": {
+      "subjective": "The patient reports constant lower back pain that worsens with activity, accompanied by numbness and tingling in the left leg.",
+      "objective": "Blood pressure is 140/90 mmHg, pulse is 80 bpm, and the patient is afebrile. Lumbar spine exam reveals tenderness to palpation and decreased range of motion.",
+      "assessment": "The patient's symptoms are consistent with lumbar radiculopathy, likely due to a herniated disc or spinal stenosis.",
+      "plan": "The patient will undergo an MRI of the lumbar spine to further evaluate the cause of his symptoms. In the meantime, he will be started on gabapentin for pain management and physical therapy will be recommended to improve range of motion and strengthen the back muscles."
+    },
+    "metadata": {
+      "age": 52,
+      "gender": "M",
+      "chief_complaint": "lower back pain",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_049",
+    "raw_text": "The patient, a 25-year-old female, presented to the emergency department with a chief complaint of anxiety attack. She reported feeling overwhelmed and experiencing shortness of breath, which started about an hour prior to arrival. The patient stated that she has been experiencing increased stress at work and has a history of anxiety, but has not been taking her prescribed medication as directed. Upon examination, the patient's vital signs were stable, with a blood pressure of 120/80 mmHg, heart rate of 100 bpm, and oxygen saturation of 98% on room air. The patient's physical exam was unremarkable, with no focal neurological deficits or abnormalities noted. She was given 2mg of lorazepam and 10mg of diazepam, which seemed to alleviate her symptoms. The patient was advised to follow up with her primary care physician and to restart her anxiety medication as prescribed.",
+    "ground_truth": {
+      "subjective": "The patient reports feeling overwhelmed and experiencing shortness of breath, with a history of anxiety and not taking prescribed medication as directed.",
+      "objective": "Vital signs were stable, with a blood pressure of 120/80 mmHg, heart rate of 100 bpm, and oxygen saturation of 98% on room air. Physical exam was unremarkable.",
+      "assessment": "Anxiety attack, likely triggered by increased stress at work and non-adherence to prescribed medication.",
+      "plan": "The patient was given 2mg of lorazepam and 10mg of diazepam, and advised to follow up with her primary care physician and to restart her anxiety medication as prescribed."
+    },
+    "metadata": {
+      "age": 25,
+      "gender": "F",
+      "chief_complaint": "anxiety attack",
+      "has_allergies": false,
+      "allergies": []
+    }
+  },
+  {
+    "note_id": "note_050",
+    "raw_text": "The patient is a 72-year-old male who presents to the emergency department with a chief complaint of shortness of breath, which has been worsening over the past 3 days. He reports that he has been experiencing increased wheezing and coughing, productive of yellow sputum, and has required increased use of his albuterol inhaler. The patient has a history of COPD, hypertension, and hyperlipidemia, and is currently taking atorvastatin, lisinopril, and tiotropium. He is a former smoker, having quit 10 years ago, and has a pack-year history of 30. On physical examination, the patient is found to be in mild distress, with a respiratory rate of 24 breaths per minute and an oxygen saturation of 88% on room air. His lung exam reveals bilateral wheezes and rhonchi, and his cardiac exam is notable for a regular rate and rhythm. The patient's laboratory results reveal a white blood cell count of 15,000 cells per microliter, with a differential showing 80% neutrophils, and his arterial blood gas results show a pH of 7.32, a PaCO2 of 55 mmHg, and a PaO2 of 60 mmHg.",
+    "ground_truth": {
+      "subjective": "The patient reports shortness of breath, wheezing, and coughing, productive of yellow sputum, and has required increased use of his albuterol inhaler.",
+      "objective": "The patient has a respiratory rate of 24 breaths per minute, an oxygen saturation of 88% on room air, bilateral wheezes and rhonchi on lung exam, a white blood cell count of 15,000 cells per microliter, and arterial blood gas results showing a pH of 7.32, a PaCO2 of 55 mmHg, and a PaO2 of 60 mmHg.",
+      "assessment": "The patient is experiencing a COPD exacerbation, likely due to a respiratory infection.",
+      "plan": "The patient will be started on oxygen therapy, bronchodilators, and antibiotics, and will be monitored closely for any signs of worsening respiratory status. The patient will also be considered for transfer to the intensive care unit for closer monitoring and potential mechanical ventilation if necessary."
+    },
+    "metadata": {
+      "age": 72,
+      "gender": "M",
+      "chief_complaint": "COPD exacerbation",
+      "has_allergies": false,
+      "allergies": []
+    }
+  }
+]
