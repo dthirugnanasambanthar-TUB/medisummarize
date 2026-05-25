@@ -101,7 +101,7 @@ if __name__ == "__main__":
         time.sleep(1)
     
     # Save to fixtures folder
-    output_path = "fixtures/patient_notes.json"
+    output_path = "fixtures/patient_notes_gemini.json"
     with open(output_path, "w") as f:
         json.dump(notes, f, indent=2)
     
