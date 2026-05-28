@@ -3,7 +3,7 @@ import json
 from groq import Groq
 from dotenv import load_dotenv
 from pydantic import BaseModel
-from store import get_chunks_by_note_id
+from store import get_chunks_by_note_id, get_cached_summary, cache_summary
 
 load_dotenv()
 
@@ -17,16 +17,21 @@ class SOAPSummary(BaseModel):
     
     
 def summarise_note(note_id: str) -> SOAPSummary:
-    # Step 1: fetch all chunks for this note
-    chunks = get_chunks_by_note_id(note_id)
+    cached = get_cached_summary(note_id)
+    if cached:
+        return SOAPSummary(
+            subjective=cached["subjective"],
+            objective=cached["objective"],
+            assessment=cached["assessment"],
+            plan=cached["plan"]
+        )
     
+    chunks = get_chunks_by_note_id(note_id)
     if not chunks:
         raise ValueError(f"No chunks found for {note_id}")
     
-    # Step 2: assemble into readable context
     context = "\n\n".join(chunks)
     
-    # Step 3: build the prompt
     system_prompt = """You are a clinical assistant helping doctors review patient notes.
     Your job is to extract a structured SOAP summary from the provided clinical text.
 
@@ -44,8 +49,7 @@ def summarise_note(note_id: str) -> SOAPSummary:
     }"""
 
     user_message = f"""Please extract a SOAP summary from this patient note: {context}"""
-
-    # Step 4: call Groq
+    
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[
@@ -55,11 +59,20 @@ def summarise_note(note_id: str) -> SOAPSummary:
         temperature=0.1
     )
     
-    # Step 5: parse and validate
     raw_output = response.choices[0].message.content.strip()
-    data = json.loads(raw_output)
-    return SOAPSummary(**data)
+    if raw_output:
+        data = json.loads(raw_output)
+        summary =  SOAPSummary(**data)
+        
+        #caching
+        summarised_dict = summary.model_dump()
+        cache_summary(note_id, summarised_dict)
+        return summary
+    
+    else:
+        raise ValueError(f"Empty response from Groq for {note_id}")
 
 if __name__ == "__main__":
     summary = summarise_note("note_001")
     print(summary.model_dump_json(indent=2))
+    

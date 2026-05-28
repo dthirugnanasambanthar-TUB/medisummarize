@@ -1,7 +1,7 @@
 import os
 from supabase import create_client
 from dotenv import load_dotenv
-from typing import List
+from typing import List,Optional
 
 load_dotenv()
 
@@ -31,6 +31,22 @@ def get_chunks_by_note_id(note_id: str) -> list[str]:
         .execute()
     
     return [row["chunk_text"] for row in result.data]
+
+def get_cached_summary(note_id: str) -> Optional[dict]:
+    result = supabase.table("summaries") \
+        .select("*") \
+        .eq("note_id", note_id) \
+        .execute()
+    
+    if result.data:
+        return result.data[0]
+    return None
+
+def cache_summary(note_id: str, summary: dict) -> None:
+    supabase.table("summaries").insert({
+        "note_id": note_id,
+        **summary
+    }).execute()
 
 if __name__ == "__main__":
     chunks = get_chunks_by_note_id("note_001")
