@@ -4,6 +4,7 @@ from groq import Groq
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from store import get_chunks_by_note_id, get_cached_summary, cache_summary
+from llm_logger import logged_llm_call
 
 load_dotenv()
 
@@ -49,14 +50,16 @@ def summarise_note(note_id: str) -> SOAPSummary:
     }"""
 
     user_message = f"""Please extract a SOAP summary from this patient note: {context}"""
-    
-    response = client.chat.completions.create(
+        
+    response = logged_llm_call(
+        client = client,
         model="llama-3.3-70b-versatile",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_message}
         ],
-        temperature=0.1
+        note_id=note_id,
+        temperature =  0.1
     )
     
     raw_output = response.choices[0].message.content.strip()
